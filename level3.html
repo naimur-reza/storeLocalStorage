@@ -4,24 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Level Three</title>
   </head>
   <body>
-    <div>
-      <input id="name-field" type="text" placeholder="Enter your name" />
-      <button onclick="deleteName()">Delete Name</button>
-      <button onclick="sendName()">Send Name</button>
-      <br />
-    </div>
-    <div>
-      <input id="email-field" type="email" placeholder="Enter your email" />
-      <button onclick="deleteEmail()">Delete Email</button>
-      <button onclick="sendEmail()">Send Email</button>
-    </div>
-    <textarea name="" id="message-field" cols="21" rows="3"></textarea>
-    <button onclick="deleteMessage()">Delete Message</button>
-    <button onclick="sendMessage()">Send Message</button>
-    <button onclick="reset()">Reset</button>
+    <main>
+      <section class="max-w-4xl mx-auto bg-slate-700 flex flex-col  pl-8  py-10">
+        <!-- Name side goes from here -->
+        <div>
+          <input class="px-5 py-2 outline-none rounded-md" id="name-field" type="text" placeholder="Enter your name" />
+          <button  class="bg-red-500 rounded-lg px-4 py-2 text-white" onclick="deleteName()">Delete Name</button>
+          <button  class="bg-red-500 rounded-lg px-4 py-2 text-white" onclick="sendName()">Send Name</button>
+          <br />
+        </div>
+        <!-- Email side goes from here -->
+        <div class="py-5">
+          <input class="px-5 py-2 outline-none rounded-md" id="email-field" type="email" placeholder="Enter your email" />
+          <button  class="bg-red-500 rounded-lg px-4 py-2 text-white" onclick="deleteEmail()">Delete Email</button>
+          <button  class="bg-red-500 rounded-lg px-4 py-2 text-white" onclick="sendEmail()">Send Email</button>
+        </div>
+        <!-- Message side goes from here -->
+        <div class="flex space-x-2  items-center">
+          <textarea class="outline-none rounded-md p-4" name="" id="message-field" cols="23" rows="3"></textarea>
+          <button  class="bg-red-500 rounded-lg px-4 py-2 text-white" onclick="deleteMessage()">Delete Message</button>
+          <button  class="bg-red-500 rounded-lg px-4 py-2 text-white" onclick="sendMessage()">Send Message</button>
+        </div>
+        <div class="py-4">
+          <button class="bg-red-500 rounded-lg px-4 py-2 text-white" onclick="reset()">Reset</button>
+        </div>
+      </section>
+    </main>
+
     <script src="./js/level3.js"></script>
   </body>
 </html>
